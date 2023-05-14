@@ -1,8 +1,16 @@
 import React from 'react';
-import { View } from 'react-native';
+import { QueryClient, QueryClientProvider } from 'react-query';
+
+import { TrendingMovies } from './pages/trendingMovies/TrendingMovies';
+
+const queryClient = new QueryClient();
 
 const App = () => {
-  return <View></View>;
+  return (
+    <QueryClientProvider client={queryClient}>
+      <TrendingMovies />
+    </QueryClientProvider>
+  );
 };
 
 export { App };
