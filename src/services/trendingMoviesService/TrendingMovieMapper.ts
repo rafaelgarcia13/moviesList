@@ -1,10 +1,10 @@
 import { TrendingMovie, TrendingMovieResponse } from './trendingMoviesModels';
 
 class TrendingMovieMapper {
-  toDomain(domainTrendingMovie: TrendingMovieResponse) {
+  static toDomain(domainTrendingMovie: TrendingMovieResponse) {
     return new TrendingMovie({
-      backdropImagePath: `https://image.tmdb.org/t/p/{widht}/${domainTrendingMovie?.backdrop_path}`,
-      posterImagePath: `https://image.tmdb.org/t/p/{widht}/${domainTrendingMovie?.poster_path}`,
+      backdropImagePath: `https://image.tmdb.org/t/p/original${domainTrendingMovie?.backdrop_path}`,
+      posterImagePath: `https://image.tmdb.org/t/p/original${domainTrendingMovie?.poster_path}`,
       title: domainTrendingMovie?.original_title,
       overview: domainTrendingMovie?.overview,
       releaseDate: domainTrendingMovie?.release_date,
@@ -18,4 +18,4 @@ class TrendingMovieMapper {
   } */
 }
 
-export default new TrendingMovieMapper();
+export { TrendingMovieMapper };

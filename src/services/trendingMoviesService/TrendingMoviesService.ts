@@ -1,7 +1,7 @@
 import { HttpClient } from '../httpClient/HttpClient';
 import { IHttpAdapter } from '../httpClient/IHttpAdapter';
 import { URLS } from '../urls';
-import TrendingMovieMapper from './TrendingMovieMapper';
+import { TrendingMovieMapper } from './TrendingMovieMapper';
 import { GET_TRENDING_MOVIES_ERROR } from './trendingMoviesConstants';
 import { ITrendingMoviesResponse, TrendingMovie } from './trendingMoviesModels';
 
